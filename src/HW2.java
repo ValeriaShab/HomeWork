@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class HW2 {
     public static void main(String[] args) {
         int x1 = 1, x2 = 3, x3 = 2;
@@ -12,6 +14,19 @@ public class HW2 {
             double square = Math.sqrt(p * (p - a) * (p - b) * (p - c));
             System.out.println("Square = " + square);
         }
+        int number = 8;
+        if (number % 2 == 0) {
+            System.out.println("Четное");
+        } else {
+            System.out.println("Не четное");
+        }
+        int num1 = 2, num2 = 3, num3 = -1;
+        if ((Math.abs(num1)) < (Math.abs(num2)) && (Math.abs(num1)) < (Math.abs(num3))) {
+            System.out.println("Наименшее значение: " + num1);
+        } else if ((Math.abs(num2)) < (Math.abs(num1)) && (Math.abs(num2)) < (Math.abs(num3))) {
+            System.out.println("Наименшее значение: " + num2);
+        } else {
+            System.out.println("Наименшее значение: " + num3);
+        }
     }
-
 }
