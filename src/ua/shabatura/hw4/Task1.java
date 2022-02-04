@@ -15,29 +15,28 @@ public class Task1 {
     private static void fillRandomArray(int[] array) {
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(10);
+            array[i] = 1+random.nextInt(10);
         }
     }
 
-    private static int findArithmeticMean(int[] array) {
-        int arithAverage = 0;
+    private static double findArithmeticMean(int[] array) {
+        double arithAverage = 0;
         if (array.length > 0) {
-            int sum = 0;
-            for (int i = 0; i < array.length; i++) {
-                sum += array[i];
+            double sum = 0;
+            for (int j : array) {
+                sum += j;
             }
             arithAverage = sum / array.length;
         }
         return arithAverage;
     }
 
-    private static int findGeometricMean(int[] array) {
-        int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum = sum * array[i];
+    private static double findGeometricMean(int[] array) {
+        double sum = 1;
+        for (int j : array) {
+            sum *= j;
         }
-        int geomAverage = (int) Math.pow(sum, 1 / array.length);
-        return geomAverage;
+        return Math.pow(sum, 1f / (float) array.length);
     }
 }
 
