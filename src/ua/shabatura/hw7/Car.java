@@ -1,10 +1,10 @@
 package ua.shabatura.hw7;
 
 public class Car {
-    public String manufacturer;
-    public String engine;
-    public String color;
-    public int petrol;
+    private String manufacturer;
+    private String engine;
+    private String color;
+    private int petrol;
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
